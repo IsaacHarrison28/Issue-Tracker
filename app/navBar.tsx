@@ -1,7 +1,13 @@
-import Link from "next/link";
-import { FaBug } from "react-icons/fa";
+"use client";
 
-export default async function NavBarComponent() {
+import Link from "next/link";
+import { usePathname } from "next/navigation"; // Adjust the import path as needed
+import { FaBug } from "react-icons/fa";
+import classnames from "classnames";
+
+export default function NavBarComponent() {
+  const currentLink = usePathname();
+  console.log("Current Link:", currentLink);
   const Links = [
     { Label: "Dashboard", href: "/" },
     { Label: "Issues", href: "/issues" },
@@ -15,7 +21,11 @@ export default async function NavBarComponent() {
         {Links.map((link) => (
           <li
             key={link.href}
-            className="text-zinc-500 text-md hover:text-zinc-800 transition-colors"
+            className={classnames({
+              "text-zinc-900": link.href === currentLink,
+              "text-zinc-500": link.href !== currentLink,
+              "hover:text-zinc-800 transition-colors duration-200": true,
+            })}
           >
             <Link href={link.href}>{link.Label}</Link>
           </li>
