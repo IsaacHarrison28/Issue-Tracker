@@ -15,7 +15,7 @@ export default async function NavBarComponent() {
         {Links.map((link) => (
           <li
             key={link.href}
-            className="text-zinc-500 hover:text-zinc-800 transition-colors"
+            className="text-zinc-500 text-md hover:text-zinc-800 transition-colors"
           >
             <Link href={link.href}>{link.Label}</Link>
           </li>
