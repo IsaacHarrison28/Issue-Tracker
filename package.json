@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@prisma/client": "^6.8.2",
+    "@radix-ui/themes": "^3.2.1",
     "@tailwindcss/postcss": "^4.1.7",
     "@types/node": "22.15.21",
     "@types/react": "19.1.5",
@@ -20,7 +21,6 @@
     "eslint-config-next": "15.4.0-canary.51",
     "next": "15.3.2",
     "postcss": "8.5.3",
-    "prisma": "^5.3.1",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-icons": "^5.5.0",
@@ -29,6 +29,7 @@
     "zod": "^3.25.32"
   },
   "devDependencies": {
-    "daisyui": "^5.0.38"
+    "daisyui": "^5.0.38",
+    "prisma": "^6.8.2"
   }
 }
